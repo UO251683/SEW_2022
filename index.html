@@ -1,25 +1,88 @@
 <!DOCTYPE HTML>
-<!-- Autor: Noé Fernández Moro -->
-<html lang="es">
 
+<html lang="es">
 <head>
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
-    <title>SEW.P0</title>
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <meta name="author" content="Noé Fernández Moro">
+    <meta name="keywords" content="node, información, TCP, HTTP, módulo, sistema">
+    <meta name ="viewport" content ="width=device-width, initial scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
 </head>
 
 <body>
     <!-- Datos con el contenidos que aparece en el navegador -->
-    <h1>Primer sitio web</h1>
-    <p>¡Hola Mundo! Este es el primer sitio web adaptable y accesible desarrollado cumpliendo los estándares
-        HTML5, CSS3. </p>
-    <!-- la carpeta de recursos gráficos "images" debe estar en el misma carpeta del archivo -->
-    <!-- anadir la sección footer dentro del body despues del párrafo -->
-    <footer>
-        <img src="images/HTML5.png" alt=" HTML5 Válido!" />
-        <img src="images/CSS3.png" alt="CSS Válido!" />
-    </footer>
-</body>
+    <header>
+        <nav>
+            <a href="index.html" accesskey="h" tabindex="1">Inicio</a>
+            <a href="versiones.html" accesskey="p" tabindex="2">Versiones</a>
+            <a href="soportes.html" accesskey="r" tabindex="3">Soporte de BBDD</a>
+            <a href="opinion.html" accesskey="o" tabindex="4">Danos tu opinión</a>
+        </nav>
+    </header>
+    <h1>Node.js</h1>
+    <h2>¿Qué es?</h2>
 
+    <p>Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) 
+        basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google. 
+        Fue creado con el enfoque de ser útil en la creación de programas de red altamente escalables, como por ejemplo, servidores web.
+        Fue creado por Ryan Dahl en 2009 y su evolución está apadrinada por la empresa Joyent, que además tiene contratado a Dahl en plantilla.</p>
+
+    <p> Node.js es similar en su propósito a Twisted o Tornado de Python, Perl Object Environment de Perl, libevent o libev de C, EventMachine de Ruby, 
+        vibe.d de D y Java EE de Java existe Apache MINA, Netty, Akka, Vert.x, Grizzly o Xsocket. Al contrario que la mayoría del código JavaScript, 
+        no se ejecuta en un navegador, sino en el servidor. Node.js implementa algunas especificaciones de CommonJS. 
+        Node.js incluye un entorno REPL para depuración interactiva.</p>
+
+    <img src="multimedia/images/nodeJS.png" alt="Imagen de Node.JS" />
+
+    <h3>Aspectos Técnicos</h3>
+    <p> Node.js funciona con un modelo de evaluación de un único hilo de ejecución, usando entradas y salidas asíncronas las cuales pueden ejecutarse concurrentemente 
+        en un número de hasta cientos de miles sin incurrir en costos asociados al cambio de contexto. 
+        Este diseño de compartir un único hilo de ejecución entre todas las solicitudes atiende a necesidades de aplicaciones altamente concurrentes, 
+        en el que toda operación que realice entradas y salidas debe tener una función callback. Un inconveniente de este enfoque de único hilo de ejecución es que Node.js 
+        requiere de módulos adicionales como cluster para escalar la aplicación con el número de núcleos de procesamiento de la máquina en la que se ejecuta. </p>
+
+    <p>Node.js incorpora varios "módulos básicos" compilados en el propio binario, como por ejemplo el módulo de red, que proporciona una capa para programación de red asíncrona 
+        y otros módulos fundamentales, como por ejemplo Path, FileSystem, Buffer, Timers y el de propósito más general Stream. 
+        Es posible utilizar módulos desarrollados por terceros, ya sea como archivos ".node" precompilados, o como archivos en Javascript plano. 
+        Los módulos Javascript se implementan siguiendo la especificación CommonJS para módulos, utilizando una variable de exportación para dar a estos scripts 
+        acceso a funciones y variables implementadas por los módulos.</p>
+
+    <p> Los módulos de terceros pueden extender node.js o añadir un nivel de abstracción, implementando varias utilidades middleware para utilizar en aplicaciones web, 
+        como por ejemplo los frameworks connect y express. Pese a que los módulos pueden instalarse como archivos simples, normalmente se instalan utilizando el Node Package Manager (npm) 
+        que nos facilitará la compilación, instalación y actualización de módulos así como la gestión de las dependencias. Además, los módulos que no se instalen en el directorio 
+        por defecto de módulos de Node necesitarán la utilización de una ruta relativa para poder encontrarlos. El wiki Node.js proporciona una lista de varios de los módulos de terceros disponibles.</p>
+
+    <section>
+        <h4>Puede interesarte...</h4>
+    
+        <p>Pequeña explicación de qué es Node.JS:</p>
+        <audio controls>
+            <source src="multimedia/audios/Breve_explicacion_NodeJS.mp3" type="audio/mp3">
+          Tu navegador no soporta audios MP3.
+        </audio>
+    </section>
+    <h3>Ejemplos</h3>
+    <p>Para finalizar esta introducción sobre Node.JS, facilitaremos dos ejemplos de código. Para el primero, crearemos el ya tan conocido "Hola Mundo" de un servidor HTTP escrito en Node.JS:</p>
+
+    <img src="multimedia/images/Ejemplo_HTTP.PNG" alt="Imagen ejemplo de un servidor HTTP.JS" />
+
+    <p> Para el segundo ejemplo, haremos lo mismo con un servidor TCP que escucha en el puerto 7000 y responde con cualquier cosa que se le envíe: </p>
+
+    <img src="multimedia/images/Ejemplo_TCP.PNG" alt="Imagen ejemplo de un servidor TCP.JS" />
+
+    <section>
+        <h4>Puede interesarte...</h4>
+        <p>Video explicatorio extenso sobre Node.JS:</p>
+        <video controls preload="auto">
+            <source src="multimedia/vids/nodeJS_que_es.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+        </video>
+    </section>
+    <footer>
+        <p>Noé Fernández Moro - Universidad de Oviedo</p>
+        <img src="multimedia/images/HTML5.png" alt=" HTML5 Válido!" />
+        <img src="multimedia/images/CSS3.png"  alt="CSS Válido!"  />
+  </footer>
+</body>
 </html>
